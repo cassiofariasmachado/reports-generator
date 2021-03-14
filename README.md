@@ -19,12 +19,16 @@ To run tests:
 
 * Run with `mix test --cover`
 
-## :zap: Check performance
+## :zap: Benchmarking
 
-To check performante:
+To compare performance using Erlang Timer module:
 
 * Run simple version `:timer.tc(fn -> ReportsGenerator.build("report_complete.csv") end)`
 * Run parallel version `:timer.tc(fn ->  ReportsGenerator.build_from_many(["report_1.csv", "report_2.csv", "report_3.csv"]) end)`
+
+To compare performance using [Benchee](https://github.com/bencheeorg/benchee):
+
+* Run `mix run benchmark.exs`
 
 ## :page_facing_up: License
 
