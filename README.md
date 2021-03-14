@@ -23,7 +23,8 @@ To run tests:
 
 To check performante:
 
-* Run `:timer.tc(fn -> ReportsGenerator.build("report_complete.csv") end)`
+* Run simple version `:timer.tc(fn -> ReportsGenerator.build("report_complete.csv") end)`
+* Run parallel version `:timer.tc(fn ->  ReportsGenerator.build_from_many(["report_1.csv", "report_2.csv", "report_3.csv"]) end)`
 
 ## :page_facing_up: License
 
